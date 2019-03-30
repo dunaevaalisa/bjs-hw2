@@ -11,8 +11,23 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
-    // код для задачи №1 писать здесь
-    //return x;
+      let discriminant = b ** 2 - 4 * a * c; {
+        let root = ['(((-b + Math.sqrt(discriminant)) / 2 * a))', ''];
+        if (discriminant < 0) {
+        console.log('Корней нет');
+        } else if (discriminant === 0) {
+        
+        console.log(`Корень уравнения: ${root}`);
+        return root;
+        } else {
+        let root1 = (((-b + Math.sqrt(discriminant)) / 2 * a));
+        let root2 = (((-b - Math.sqrt(discriminant)) / 2 * a));
+        console.log(`Корни уравнения: ${root1} и ${root2}`);
+        return root1;
+        return root2;
+        }
+        }
+        return root;
 }
 
 function calculateDrinkTask(){
