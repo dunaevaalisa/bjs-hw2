@@ -37,11 +37,18 @@ function calculateDrinkTask(){
     window.drink.textContent = drink;
 }
 
-function askDrink(name,dateOfBirthday){
-    // код для задачи №2 писать здесь
-    //console.log(result)
-    //return result;
+
+function askDrink(name, dateOfBirthday) {
+let year = (new Date).getFullYear()
+let age = year - dateOfBirthday 
+console.log(`Ваш возраст:  ${age}`);
+if (age >= 18) {
+console.log(`Не желаете ли олд-фэшн , ${name} ?`)
+} else {
+  console.log(`Сожалею, ${name} , но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`)
 }
+}
+
 
 function calculateAverageRating(){
     let marks = window.marks.value.split("").map(Number).filter((n)=> !isNaN(n) && n > 0);
