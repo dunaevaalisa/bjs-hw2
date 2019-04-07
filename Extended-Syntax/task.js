@@ -57,6 +57,13 @@ function calculateAverageRating(){
 }
 
 function getAverageMark(marks){
-    // код для задачи №3 писать здесь
-    //return averageMark;
+     if(marks.lenght > 5) {
+    console.log('ошибка');
+    marks.pop()
+  } else {
+   for(i=0;i<marks.length;i++){
+  let averageMark = (marks[i]) / marks.length 
+console.log(averageMark)
+}
+  } 
 }
