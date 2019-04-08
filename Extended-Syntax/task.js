@@ -37,14 +37,17 @@ function calculateDrinkTask(){
 
 
 function askDrink(name, dateOfBirthday) {
-let year = (new Date).getFullYear()
-let age = year - dateOfBirthday 
+ let year = new Date().getFullYear();
+let age = year - dateOfBirthday; 
 console.log(`Ваш возраст:  ${age}`);
 if (age >= 18) {
-console.log(`Не желаете ли олд-фэшн , ${name} ?`)
+    result = `Не желаете ли олд-фэшн , ${name} ?`;
+console.log(result);
 } else {
-  console.log(`Сожалею, ${name} , но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`)
+  let result = `Сожалею, ${name} , но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`);
+    console.log(result);
 }
+    return result
 }
 
 
@@ -55,13 +58,14 @@ function calculateAverageRating(){
 }
 
 function getAverageMark(marks){
+    for(i=0;i<marks.length;i++){
+  let averageMark = (marks[i]) / marks.length ;
      if(marks.lenght > 5) {
     console.log('ошибка');
-    marks.pop()
+    marks.splice(5)
   } else {
-   for(i=0;i<marks.length;i++){
-  let averageMark = (marks[i]) / marks.length 
-console.log(averageMark)
+   
+console.log(averageMark);
 }
   } 
 }
