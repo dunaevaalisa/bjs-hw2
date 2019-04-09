@@ -50,7 +50,6 @@ console.log(result);
     return result
 }
 
-
 function calculateAverageRating(){
     let marks = window.marks.value.split("").map(Number).filter((n)=> !isNaN(n) && n > 0);
     let averageMark = getAverageMark(marks);
@@ -58,14 +57,16 @@ function calculateAverageRating(){
 }
 
 function getAverageMark(marks){
-    for(i=0;i<marks.length;i++){
-  let averageMark = (marks[i]) / marks.length ;
+   marks.splice(5);
+       let sum = 0;
+      let total = 0;
+for(let i = 0; i < marks.length; i++) {
+    total += marks[i];
+}
+let averageMark = total / marks.length;
      if(marks.lenght > 5) {
     console.log('ошибка');
-    marks.splice(5)
   } else {
-   
-console.log(averageMark);
-}
+    console.log(averageMark);
+  }
   } 
-}
