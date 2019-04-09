@@ -1,5 +1,4 @@
 
-
 function calculateQuadraticEquation(){
     let a = +window.a.value;
     let b = +window.b.value;
@@ -12,21 +11,21 @@ function calculateQuadraticEquation(){
 
 function getResult(a,b,c){
     let discriminant = b ** 2 - 4 * a * c; 
-        let root = ['(((-b + Math.sqrt(discriminant)) / 2 * a))', '(((-b - Math.sqrt(discriminant)) / 2 * a))'];
+        let root = [(((-b + Math.sqrt(discriminant)) / 2 * a)), (((-b - Math.sqrt(discriminant)) / 2 * a))];
         if (discriminant < 0) {
         console.log('Корней нет');
+        return [''];
         } else if (discriminant === 0) {
-        
-        console.log(`Корень уравнения: ${root}`);
-        return root;
+        console.log(`Корень уравнения: ${root[0]}`);
+        return [root[0]];
         } else {
         let root1 = (((-b + Math.sqrt(discriminant)) / 2 * a));
         let root2 = (((-b - Math.sqrt(discriminant)) / 2 * a));
         console.log(`Корни уравнения: ${root1} и ${root2}`);
-        return [root1, root2]
-        }
-        
+        return [root1, root2];
+        }        
 }
+
 
 function calculateDrinkTask(){
     let name = window.personName.value;
@@ -41,13 +40,13 @@ function askDrink(name, dateOfBirthday) {
 let age = year - dateOfBirthday; 
 console.log(`Ваш возраст:  ${age}`);
 if (age >= 18) {
-    result = `Не желаете ли олд-фэшн , ${name} ?`;
+    let result = `Не желаете ли олд-фэшн , ${name} ?`;
 console.log(result);
 } else {
-  let result = `Сожалею, ${name} , но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`);
+  let result = (`Сожалею, ${name} , но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`);
     console.log(result);
+    return result;
 }
-    return result
 }
 
 function calculateAverageRating(){
